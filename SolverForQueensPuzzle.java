@@ -59,19 +59,39 @@ public class SolverForQueensPuzzle {
     private void recordSolutionsStarted() {
 
         // Which has been requested, a base case or recursive case?
+        if (inProgress.accept()) {
             // your code here
+            nBoardsConsidered++;
+            solutions.add(new BoardForQueensPuzzle(inProgress));
             // action(s) for base case(s)
-            System.out.println( "  for debugging: base case detected for..."
+            /* System.out.println( "  for debugging: base case detected for..."
                               + System.lineSeparator()
                               + inProgress
-                              );
-
+                              ); */
+        }else if (inProgress.lastIsNg()){
+            // your code here
+            nBoardsConsidered++;
+            // action(s) for base case(s)
+            /* System.out.println( "  for debugging: base case detected for..."
+                              + System.lineSeparator()
+                              + inProgress
+                              ); */
+        }else {
+            nBoardsConsidered++;
             // action for recursive cases
             // your code here
-            System.out.println( "  for debugging: recursive case detected for..."
+            /* System.out.println( "  for debugging: recursive case detected for..."
                               + System.lineSeparator()
                               + inProgress
-                              );
+                              ); */
+            for(int iFileConsidered = 0;
+                iFileConsidered < inProgress.ranks();
+                iFileConsidered++) {
+                    inProgress.populate(iFileConsidered);
+                    recordSolutionsStarted();
+                    inProgress.depopulate();
+                }
+        }
     }
 
 
@@ -91,6 +111,7 @@ public class SolverForQueensPuzzle {
         recordSolutionsStarted(); // "started" with an empty board
         elapsedSeconds =   (System.currentTimeMillis() - startAt)
                          / 1000.;
+        
     }
 
 
