@@ -1,13 +1,9 @@
 # represent a solver for the queens problem
 
-## [your name here]'s remarks
+## Junhee's remarks
 
 ### citations / worked with / received help from
-Replace this paragraph with a solid accounting of your sources.
-People have become either lackadaisical or dishonest
-about crediting others for ideas and help. 
-If I grade this work, I will rely on this section as
-a complete listing for judging academic honesty.
+based off of source code from skeletonsHolmes/78_SolverForQueensPuzzle
 
 This list may omit sources common to everyone in the course,
 including...

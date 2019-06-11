@@ -26,6 +26,13 @@ public class BoardForQueensPuzzle {
      */
     public BoardForQueensPuzzle( BoardForQueensPuzzle old) {
         // your code here
+      lastRankFilled = old.lastRankFilled;
+      filesWithQueens = new int[old.filesWithQueens.length];
+      for(int iRankFilled = 0;
+          iRankFilled <= lastRankFilled; //only need to populate up to lastRankFilled, other data is irrelevant
+          iRankFilled++) {
+            filesWithQueens[iRankFilled] = old.filesWithQueens[iRankFilled];
+          }
     }
 
 
