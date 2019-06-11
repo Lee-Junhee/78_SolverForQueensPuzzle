@@ -12,6 +12,10 @@ including...
 * communication with Holmes via the class
 web site or GitHub repos.
 
+### possible methods of creating the collection differently
+It may be possible to return a single item collection at the legal layout base case and an empty collection at the illegal base case. This would mean that instead of having a collection that the recursion continues to access, it can merge the collections it is given and return the merged collection.
+I haven't given it enough thought to determine which is more efficient, but this method seems to be interesting and more recursion-like to me.
+
 
 ## Holmes's remarks
 
